@@ -2,7 +2,6 @@
 
 # read wekan config
 source $SNAP/bin/config
-source $SNAP_COMMON/wekan_settings.sh
 
 # TODO: uncomment following, once snapctl can be called from outside the hooks
 # for key in ${keys[@]}
@@ -31,8 +30,5 @@ do
       echo "using default value: $key='${!default_value}'"
       export $key=${!default_value}
       # echo "export $key='${!def_value}'" >> $SETTINGS_FILE
-  else
-      echo "using existing value: $key='${!key}'"
-      export $key=${!key}
   fi
 done
